@@ -8,4 +8,6 @@
 #sondong p{color:var(--bs-gray)}
 .card-3{background-color:var(--bs-secondary); padding:5%; margin-top:0}
 
-
+@media only screen and (max-width: 767px) {
+    .card-3{ padding:10% 0 10% 0; background-color:transparent}
+}

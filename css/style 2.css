@@ -3,7 +3,7 @@
 
 body{background:var(--bs-dark); color:var(--bs-white); font-family: 'Source Sans Pro', sans-serif;letter-spacing:0.02rem}
 .img-logo{width:50px;}
-.container-fluid{width:90%;magic:auto}
+.container-fluid{width:90%;}
 strong{color:var(--bs-primary)}
 
 .section-btn {
@@ -147,7 +147,7 @@ footer a:hover{color:var(--bs-light); text-decoration:none}
 
 @media only screen and (max-width: 767px) {
   /* For mobile: */
-  .container-fluid{width:96%%}
+  .container-fluid{width:98%}
 	#home{padding:80px 0 80px 0}
 	.img-character-left{transform: scale(0)}
 	.img-character{transform: scale(0)}
