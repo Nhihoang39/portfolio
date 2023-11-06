@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{background:var(--bs-dark); color:var(--bs-white); font-family: 'Source Sans Pro', sans-serif;letter-spacing:0.02rem}
+.img-logo{width:50px;}
+.container-fluid{width:90%;magic:auto}
+strong{color:var(--bs-primary)}
+
+.section-btn {
+  background-color: var(--bs-primary);
+  border: 3px solid #232B2B;
+  border-radius: 100px;
+  color: var(--bs-white);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  padding: 12px 36px;
+  margin-top: 42px;
+  transition: all 0.4s ease-in-out;
+  text-transform: uppercase;
+}
+
+.section-btn:hover {
+  background: var(--bs-light);
+  border-color: transparent;
+  color: var(--bs-primary);
+}
+.section-btn a:hover{color:var(--bs-primary)}
+
+.btn-success:focus {
+  /*background-color: #121212;
+  border-color: transparent;*/
+	background-color: var(--bs-primary);
+  border: 3px solid #232B2B;
+  border-radius: 100px;
+  color: var(--bs-light);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  padding: 12px 36px;
+  margin-top: 42px;
+  transition: all 0.4s ease-in-out;
+  text-transform: uppercase;
+}
+
+#home{
+	padding:120px 0 200px 0
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0.2,
+  'opsz' 8
+}
+
+#home h1{font-size:52px}
+.img-character{width:250px; right:10%; position:absolute;transform: rotate(4deg);animation-name: example1;
+  animation-duration: 3s;animation-iteration-count: infinite;animation-timing-function: ease-in-out;}
+.img-character-left{width:500px; position:absolute;; animation-name: example2;animation-duration: 3s;animation-iteration-count: infinite;animation-timing-function: ease-in-out;}
+
+@keyframes example2 {
+	0%{top:140px}
+	50%{top:160px}
+	100%{top:140px}}
+@keyframes example1 {
+	0%{top:260px}
+	50%{top:280px}
+	100%{top:260px}}
+
+.img-animation{width:700px; right:-20%; position:absolute; animation-name: example3; bottom:10%;
+  animation-duration: 20s;animation-iteration-count: infinite;animation-timing-function:ease-in-out;opacity:30% }
+
+@keyframes example3 {
+	0%{transform: rotate(0deg)}
+	50%{transform: rotate(180deg)}
+	100%{transform: rotate(0deg)}}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--bs-light);
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+	margin:auto;
+	left:20%;
+	bottom:20%;
+  transform: scaleX(0);
+  height: 1.5px;
+  background-color: var(--bs-light);
+  transform-origin: bottom left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+#work {padding-top:0px; border:none}
+.card-img{object-fit:cover; width: 100%; border-radius:0}
+#work h5{padding-top:12px}
+#work p,sub{color:var(--bs-gray);line-height:1.4rem}
+
+
+.img-gif{width:90px;height:80px; object-fit:cover;}
+footer {padding-bottom:80px; padding-top:80px; position:relative}
+footer a{color:var(--bs-light); text-decoration:none}
+footer a:hover{color:var(--bs-light); text-decoration:none}
+
+#service {background:url("../images/1Sondoongcave.jpg") no-repeat center top ;width:100%; height:800px; display: flex; align-items: center; position:relative}
+#service .card{background:var(--bs-light); color:var(--bs-dark);box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19) }
+#service .card h5{padding:10px}
+#service .card .card-img{border-bottom-right-radius:0; border-bottom-left-radius:0}
+
+.popblack{background:black; position:absolute; width:100%; height:100%; opacity:0.8; border-radius:0.375rem;transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;}
+#service a{opacity:1; color:var(--bs-light); text-decoration:none;font-weight:600;position: absolute;
+  top: 50%; left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);}
+
+#service .card:hover .popblack{transform: scaleX(1); transform-origin:left}
+
+
+@media screen and (max-width: 1200px) and (min-width: 993px)
+{
+  .img-animation{width:600px;}
+  #service{height:900px}
+}
+
+@media only screen and (max-width:992px) and (min-width: 768px){
+  /* For tablets: */
+
+  #service {background-image:none; height:100%}	
+	.img-animation{visibility:hidden}
+  .py-5{padding-top:20px; padding-bottom:20px}  
+}
+
+
+@media only screen and (max-width: 767px) {
+  /* For mobile: */
+  .container-fluid{width:96%%}
+	#home{padding:80px 0 80px 0}
+	.img-character-left{transform: scale(0)}
+	.img-character{transform: scale(0)}
+	#home h1{font-size:50px}
+	.card-img{object-fit:cover; width: 100%; min-height:250px}
+
+  #work sub{visibility: hidden}
+	#work br{display: none}
+  #service {background-image:none; height:100%}	
+	.img-animation{visibility:hidden}
+	#service  br{display: none}
+	.modal-footer{justify-content: left;}
+	.py-5{padding-top:20px; padding-bottom:20px}
+  .pe-4{padding-right:0}
+  .col-sm-12{padding-left:0; padding-right:0}
+  .row{margin-left:0; margin-right:0}
+  section{padding-top:30px; padding-bottom:30px}
+}
+
+	
+	
+	
+	
+
+	

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+#web-design p{font-weight:200px}
+#sondong h4{font-weight:400}
+#sondong p{color:var(--bs-gray)}
+.card-3{background-color:var(--bs-secondary); padding:5%; margin-top:0}
+
+
